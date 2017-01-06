@@ -1,10 +1,56 @@
+""dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/kaya/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/Users/kaya/.cache/dein')
+
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your plugins here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('shougo/unite.vim')
+call dein#add('tpope/vim-fugitive')
+call dein#add('scrooloose/nerdtree')
+call dein#add('tomasr/molokai')
+"haskell"
+"call dein#add('Shougo/neocomplete')
+call dein#add('dag/vim2hs')
+call dein#add('eagletmt/neco-ghc')
+call dein#add('w0ng/vim-hybrid')
+
+" You can specify revision/branch/tag.
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
+
+
+
 if has("syntax")
       syntax on
     endif
  
-colorscheme molokai
-set t_Co=256
-
+    set t_Co=256
+    set background=dark
+    colorscheme hybrid
     set number
     set title
     set ambiwidth=double
@@ -42,51 +88,6 @@ set viminfo='50,\"3000,:0,n~/.viminfo
 
 autocmd FileType java :setlocal omnifunc=javacomplete#Complete
 autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
-
-""dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
-" Required:
-set runtimepath+=/Users/kaya/.cache/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-call dein#begin('/Users/kaya/.cache/dein')
-
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
-
-" Add or remove your plugins here:
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('shougo/unite.vim')
-call dein#add('tpope/vim-fugitive')
-call dein#add('scrooloose/nerdtree')
-call dein#add('tomasr/molokai')
-
-
-
-" You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-call dein#add('Shougo/neocomplete')
-call dein#add('eagletmt/neco-ghc')
-call dein#add('eagletmt/ghcmod-vim')
-call dein#add('dag/vim2hs')
-" Required:
-call dein#end()
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-
-"End dein Scripts-------------------------
 
 
 """""""""""""""""""""""""""""""
