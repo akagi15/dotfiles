@@ -21,8 +21,8 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('scrooloose/nerdtree')
 call dein#add('tomasr/molokai')
 "haskell"
-"call dein#add('Shougo/neocomplete')
-call dein#add('dag/vim2hs')
+call dein#add('Shougo/neocomplete')
+"call dein#add('dag/vim2hs')
 call dein#add('eagletmt/neco-ghc')
 call dein#add('w0ng/vim-hybrid')
 
